@@ -23,8 +23,10 @@ def remove_bg():
     img_io.seek(0)
 
     return send_file(img_io, mimetype='image/png')  # corrigé ici
+import os
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 4000))  # Render passe le port via une variable d’environnement
+    port = int(os.environ.get("PORT", 5000))  # Render fournit $PORT automatiquement
     app.run(host="0.0.0.0", port=port)
+
 
