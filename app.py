@@ -5,6 +5,9 @@ import io
 import os  # placé correctement ici
 
 app = Flask(__name__)
+@app.route('/')
+def index():
+    return "Bienvenue sur l'API de suppression de fond !"
 
 @app.route('/remove-bg', methods=['POST'])
 def remove_bg():
